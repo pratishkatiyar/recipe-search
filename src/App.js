@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { BsGithub } from "react-icons/bs";
+import { AiFillLinkedin } from "react-icons/ai";
+import { BiCodeCurly } from "react-icons/bi";
 import Axios from "axios";
 import styled from "styled-components";
 import Dialog from "@material-ui/core/Dialog";
@@ -109,9 +112,39 @@ const Header = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 20px;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
   box-shadow: 0 3px 6px 0 #555;
+  height: 10%;
+`;
+const Footer = styled.div`
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  box-shadow: 2px 0 0 4px #555;
+  bottom: 0;
+  left:0;
+  right:0;
+  width: 100%;
+  position: fixed;
+  font-size: 53%;
+  height: 2%;
+`;
+const FooterContainer = styled.div`
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  font-size: 200%;
+  font-weight: bold;
+  width: 7%;
 `;
 const SearchBox = styled.div`
   display: flex;
@@ -176,7 +209,7 @@ const AppComponent = () => {
       <Header>
         <AppName>
           <RecipeImage src="/recipe-search/hamburger.svg" />
-          Search Recipe
+          Recipe Finder
         </AppName>
         <SearchBox>
           <SearchIcon src="/recipe-search/search-icon.svg" />
@@ -196,7 +229,16 @@ const AppComponent = () => {
           <Placeholder src="/recipe-search/hamburger.svg" />
         )}
       </RecipeListContainer>
+      <Footer>
+        <FooterContainer>
+          <a href="https://github.com/pratishkatiyar/recipe-search"><BsGithub/></a>
+          <a href="https://www.linkedin.com/in/pratishkatiyar/"><AiFillLinkedin/></a>
+          <a href="https://pratish-katiyar.netlify.app/"><BiCodeCurly/></a>
+        </FooterContainer>
+
+      </Footer>
     </Container>
+    
   );
 };
 
