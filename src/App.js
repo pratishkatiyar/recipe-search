@@ -9,8 +9,8 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogActions from "@material-ui/core/DialogActions";
 
-const APP_ID = "52e7387e";
-const APP_KEY = "ec99c7c0cc53cbf4aca4405f3214855a";
+const APP_ID = "";
+const APP_KEY = "";
 
 const RecipeContainer = styled.div`
   display: flex;
